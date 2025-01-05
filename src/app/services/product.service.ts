@@ -15,9 +15,14 @@ export class ProductService {
     // console.log('ProductService initialized');
   }
 
-  getProductList(): Observable<Product[]> {
-    // console.log('Service - Fetching products from API:', this.baseUrl);
-    return this.httpClient.get<GetResponse>(this.baseUrl).pipe(
+  getProductList(theCategoryId: number): Observable<Product[]> {
+    
+    //need to build URL based on category id 
+    const searchUrl = `${this.baseUrl}/search/findByCategoryId?id=${theCategoryId}`;
+    console.log("searchUrl", searchUrl);
+    
+
+    return this.httpClient.get<GetResponse>(searchUrl).pipe(
       map(response => response._embedded.products)
     );
   }

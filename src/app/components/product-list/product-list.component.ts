@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgFor, CurrencyPipe, NgIf } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../common/product';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
-  imports: [NgIf, NgFor, CurrencyPipe],
+  imports: [NgIf, NgFor, CurrencyPipe, RouterModule],
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })

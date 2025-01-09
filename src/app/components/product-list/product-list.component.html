@@ -41,7 +41,9 @@
                                 <ngb-pagination [(page)]="thePageNumber"
                                                 [pageSize]="thePageSize"
                                                 [collectionSize]="theTotalElements"
+                                                [maxSize]="5"  
                                                 (pageChange)="listProducts()">
+                                                <!-- if more than maxSize ="5", other pages use '...' to present -->
 
                                 </ngb-pagination>
 

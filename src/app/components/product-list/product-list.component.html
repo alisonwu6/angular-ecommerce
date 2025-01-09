@@ -42,6 +42,7 @@
                                                 [pageSize]="thePageSize"
                                                 [collectionSize]="theTotalElements"
                                                 [maxSize]="5"  
+                                                [boundaryLinks]="true"
                                                 (pageChange)="listProducts()">
                                                 <!-- if more than maxSize ="5", other pages use '...' to present -->
 
@@ -49,6 +50,7 @@
 
                             </div>
 
+                            <!-- http://ng-bootstrap.github.io -->
                             <div class="col-md-3 mt-2" style="text-align: right;">
                                 <span class="mr-2">Page Size</span>
 

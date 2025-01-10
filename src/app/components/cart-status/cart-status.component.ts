@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { CurrencyPipe, NgFor } from '@angular/common';
 import { CartService } from '../../services/cart.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cart-status',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './cart-status.component.html',
   styleUrl: './cart-status.component.css',
 })

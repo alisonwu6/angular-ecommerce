@@ -25,7 +25,7 @@ export class CartService {
     if (existingCartItem && this.cartItems.length > 0) {
       // check if we found it
       alreadyExistsInCart = existingCartItem != undefined;
-      console.log(`alreadyExistsInCart: ${alreadyExistsInCart}`);
+      // console.log(`alreadyExistsInCart: ${alreadyExistsInCart}`);
     }
 
     if (existingCartItem && alreadyExistsInCart) {
@@ -58,20 +58,14 @@ export class CartService {
   }
 
   logCartData(totalPriceValue: number, totalQuantityValue: number) {
-    console.log('Contents of the cart');
+    // console.log('Contents of the cart');
     for (let tempCartItem of this.cartItems) {
       const subTotalPrice = tempCartItem.quantity * tempCartItem.unitPrice;
-      console.log(
-        `name: ${tempCartItem.name}, quantity=${tempCartItem.quantity}, unitPrice=${tempCartItem.unitPrice}, subTotalPrice=${subTotalPrice}`
-      );
+      // console.log(`name: ${tempCartItem.name}, quantity=${tempCartItem.quantity}, unitPrice=${tempCartItem.unitPrice}, subTotalPrice=${subTotalPrice}`);
     }
 
-    console.log(
-      `totalPrice: ${totalPriceValue.toFixed(
-        2
-      )}, totalQuantity: ${totalQuantityValue}`
-    );
-    console.log('----');
+    // console.log(`totalPrice: ${totalPriceValue.toFixed(2)}, totalQuantity: ${totalQuantityValue}`);
+    // console.log('----');
   }
 
   decrementQuantity(theCartItem: CartItem) {

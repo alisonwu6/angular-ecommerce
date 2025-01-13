@@ -14,7 +14,7 @@ export class AppComponent {
   title = 'angular-ecommerce';
 
   onClick(event: MouseEvent): void {
-    console.log('Link clicked!');
+    // console.log('Link clicked!');
     event.stopPropagation(); // Ensure parent listeners don't interfere
   }
 }

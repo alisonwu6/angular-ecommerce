@@ -117,26 +117,26 @@ export class CheckoutComponent implements OnInit {
     // populate credit card months
 
     const startMonth: number = new Date().getMonth() + 1;
-    console.log('startMonth: ' + startMonth);
+    // console.log('startMonth: ' + startMonth);
 
     this.luv2ShopFormService
       .getCreditCardMonths(startMonth)
       .subscribe((data) => {
-        console.log('Retrieved credit card months: ' + JSON.stringify(data));
+        // console.log('Retrieved credit card months: ' + JSON.stringify(data));
         this.creditCardMonths = data;
       });
 
     // populate credit card years
 
     this.luv2ShopFormService.getCreditCardYears().subscribe((data) => {
-      console.log('Retrieved credit card years: ' + JSON.stringify(data));
+      // console.log('Retrieved credit card years: ' + JSON.stringify(data));
       this.creditCardYears = data;
     });
 
     // populate countries
 
     this.luv2ShopFormService.getCountries().subscribe((data) => {
-      console.log('Retrieved countries: ' + JSON.stringify(data));
+      // console.log('Retrieved countries: ' + JSON.stringify(data));
       this.countries = data;
     });
   }
@@ -177,18 +177,18 @@ export class CheckoutComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("Handling the submit button");
+    // console.log("Handling the submit button");
 
     if (this.checkoutFormGroup.invalid) {
       this.checkoutFormGroup.markAllAsTouched();
     }
 
     
-    console.log(this.checkoutFormGroup.get('customer')!.value);
-    console.log("The email address is " + this.checkoutFormGroup.get('customer')!.value.email);
+    // console.log(this.checkoutFormGroup.get('customer')!.value);
+    // console.log("The email address is " + this.checkoutFormGroup.get('customer')!.value.email);
   
-    console.log("The shipping address country is " + this.checkoutFormGroup.get('shippingAddress')!.value.country.name);
-    console.log("The shipping address state is " + this.checkoutFormGroup.get('shippingAddress')!.value.state.name);
+    // console.log("The shipping address country is " + this.checkoutFormGroup.get('shippingAddress')!.value.country.name);
+    // console.log("The shipping address state is " + this.checkoutFormGroup.get('shippingAddress')!.value.state.name);
   }
 
   handleMonthsAndYears() {
@@ -212,7 +212,7 @@ export class CheckoutComponent implements OnInit {
     this.luv2ShopFormService
       .getCreditCardMonths(startMonth)
       .subscribe((data) => {
-        console.log('Retrieved credit card months: ' + JSON.stringify(data));
+        // console.log('Retrieved credit card months: ' + JSON.stringify(data));
         this.creditCardMonths = data;
       });
   }
@@ -223,8 +223,8 @@ export class CheckoutComponent implements OnInit {
     const countryCode = formGroup!.value.country.code;
     const countryName = formGroup!.value.country.name;
 
-    console.log(`${formGroupName} country code: ${countryCode}`);
-    console.log(`${formGroupName} country name: ${countryName}`);
+    // console.log(`${formGroupName} country code: ${countryCode}`);
+    // console.log(`${formGroupName} country name: ${countryName}`);
 
     this.luv2ShopFormService.getStates(countryCode).subscribe((data) => {
       if (formGroupName === 'shippingAddress') {

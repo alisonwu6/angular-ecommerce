@@ -21,6 +21,7 @@
               "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
+            "aot": true,
             "assets": [
               {
                 "glob": "**/*",
@@ -32,6 +33,7 @@
             "styles": [
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@okta/okta-signin-widget/dist/css/okta-sign-in.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []
